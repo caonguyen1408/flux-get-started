@@ -32,7 +32,7 @@ spec:
         image: alpine:3.10.1
         command:
         - sleep
-        - "2"
+        - "1"
       containers:
       - name: podinfod
         image: stefanprodan/podinfo:3.1.0

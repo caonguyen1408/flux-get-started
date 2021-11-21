@@ -21,6 +21,6 @@ spec:
     kind: GitRepository
     name: flux-get-started
   update:
-    path: ./clusters/staging/frontend
+    path: ./clusters/staging
     strategy: Setters
 

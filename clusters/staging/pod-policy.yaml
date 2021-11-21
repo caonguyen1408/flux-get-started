@@ -2,10 +2,10 @@ apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
   name: frontend
-  namespace: default
+  namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: podinfo
+    name: frontend
   policy:
     alphabetical:
       order: asc

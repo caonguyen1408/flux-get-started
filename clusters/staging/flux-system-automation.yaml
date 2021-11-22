@@ -14,10 +14,25 @@ spec:
         email: ntcn14089@gmail.com
         name: caonguyen1408
       messageTemplate: |
+       |
+        Automated image update
+
+        Automation name: {{ .AutomationObject }}
+
+        Files:
+        {{ range $filename, $_ := .Updated.Files -}}
+        - {{ $filename }}
+        {{ end -}}
+
+        Objects:
+        {{ range $resource, $_ := .Updated.Objects -}}
+        - {{ $resource.Kind }} {{ $resource.Name }}
+        {{ end -}}
+
         Images:
-          {{ range .Updated.Images -}}
-          - {{.}}
-          {{ end -}}
+        {{ range .Updated.Images -}}
+        - {{.}}
+        {{ end -}}        
     push:
       branch: staging
   interval: 1m0s

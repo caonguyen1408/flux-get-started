@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontendd
-          image: caonguyen14/web-app:v3.0  # {"$imagepolicy": "flux-system:frontend"}
+          image: ghcr.io/stefanprodan/podinfo:5.0.0 # {"$imagepolicy": "flux-system:frontend"}
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

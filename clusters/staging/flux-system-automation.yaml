@@ -5,13 +5,20 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  checkout:
-    branch: staging
-    gitRepositoryRef:
-      name: flux-system
-  commit:
-    authorEmail: fluxcdbot@users.noreply.github.com
-    authorName: fluxcdbot
-    messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout:
+      ref:
+        branch: staging
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: staging
   update:
+    path: ./clusters/my-cluster
     strategy: Setters

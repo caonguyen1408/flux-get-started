@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: podinfo
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: frontend
+      app: podinfo
   template:
     metadata:
       labels:
-        app: frontend
+        app: podinfo
     spec:
       containers:
-        - name: frontendd
+        - name: podinfod
           image: ghcr.io/stefanprodan/podinfo:5.0.0 # {"$imagepolicy": "flux-system:podinfo"}
           imagePullPolicy: IfNotPresent
           ports:

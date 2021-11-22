@@ -11,8 +11,8 @@ spec:
         branch: staging
     commit:
       author:
-        email: fluxcdbot@users.noreply.github.com
-        name: fluxcdbot
+        email: ntcn14089@gmail.com
+        name: caonguyen1408
       messageTemplate: |
         Images:
           {{ range .Updated.Images -}}

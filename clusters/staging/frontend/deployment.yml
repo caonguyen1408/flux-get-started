@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontendd
-          image: caonguyen14/web-app:v1
+          image: caonguyen14/web-app:v3
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

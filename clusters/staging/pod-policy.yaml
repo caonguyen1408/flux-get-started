@@ -8,4 +8,4 @@ spec:
     name: frontend
   policy:
     semver:
-      range: '>=v3.0'
+      range: '>v3.0'

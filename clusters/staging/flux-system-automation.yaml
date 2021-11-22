@@ -11,9 +11,9 @@ spec:
         branch: staging
     commit:
       author:
-        email: ntcn14089@gmail.com
-        name: caonguyen1408
-      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}' 
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
       branch: staging
   interval: 1m0s

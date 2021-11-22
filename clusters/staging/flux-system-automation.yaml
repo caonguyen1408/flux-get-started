@@ -20,5 +20,4 @@ spec:
     push:
       branch: staging
   update:
-    path: ./clusters/staging/frontend
     strategy: Setters
